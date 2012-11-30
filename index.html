@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Matthew Henderson - College Station, TX</title>
+  <link rel="stylesheet" href="style/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="style/home.css" type="text/css">
+</head>
+<body>
+
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container">
+        <a class="brand" href="#">Jack Reilly</a>
+        <ul class="nav">
+         <li><a href="http://amplif.ication.net">Dummy</a></li>
+       </ul>
+     </div>
+   </div>
+ </div>
+
+ <div id="masthead">
+  <h1>Jack Reilly</h1>
+</div>
+
+<div id="sociallinks"></div>
+
+<div id="featured">
+ <div style="width:920px;margin:0 auto;">
+  <a href="#sociallinks" class="scrollPage"><img src="images/arrow.png" style="float:right;padding:0;margin:0 7px 0 0;"></a>
+  <div class="social">
+   <img src="images/texas.png">
+   <div class="sociallinks">
+    <a href="http://twitter.com/m_att_henderson"><img src="images/twitter.png" class="socialicon"></a>
+    <a href="http://www.linkedin.com/in/matthewthenderson"><img src="images/linkedin.png" class="socialicon"></a>
+    <a href="http://www.youtube.com/oneservant2go"><img src="images/youtube.png" class="socialicon"></a>
+    <a href="http://www.flickr.com/photos/oneservant2go"><img src="images/flickr.png" class="socialicon"></a>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container">
+
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit">
+
+    <img src="family.jpg" alt="My family" align="right" style="margin:0 0 0 10px;border:1px solid #444;" />
+    <h2>It's all pretty basic...</h2>
+    <p>
+     I'm an Aggie journalist from Waco, living in College Station, supporting Sooner research in the social sciences as a <br />web developer.
+     <br /><br /><br />
+   </p>
+   <p>You can find out more from<br />the links above.</p>
+
+ </div>
+
+
+ <footer>
+  <p>&copy; Jack Reilly 2012</p>
+</footer>
+
+</div>
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+$('.scrollPage').click(function() {
+ var elementClicked = $(this).attr("href");
+ var destination = $(elementClicked).offset().top;
+ $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-40}, 600 );
+ return false;
+});
+</script>
+
+<!-- GOOGLE ANALYTICS -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-68578-20']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+</html>
