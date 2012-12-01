@@ -111,5 +111,4 @@ $(document).ready(function(){
 	})
 
 	/* Emulating a click on the first tab so that the content area is not empty: */
-	$("#collapseOne").collapse('show');
 });

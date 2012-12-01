@@ -11,5 +11,11 @@ line.link {
 
 .accordion {
   width: 400px;
-  float: right;
+  float: left;
+}
+
+#tabContent {
+  width: 400px;
+  height: 400px;
+  position: relative;
 }

@@ -125,34 +125,34 @@ main = () ->
     .each "end", cb
 
   setState = (elem, p1) ->
-    d3.select(elem['plot-state'])
+    d3v2.select(elem['plot-state'])
     .attr('cx', p1[0])
     .attr('cy', p1[1])
 
   moveState = (elem, p1, p2, t, cb) ->
     setState elem, p1 if p1
-    d3.select(elem['plot-state']).transition().ease('linear')
+    d3v2.select(elem['plot-state']).transition().ease('linear')
     .duration(t*simTime)
     .attr('cx', p2[0])
     .attr('cy', p2[1])
     .each "end", cb
 
   setArc = (elem, thick, fill) ->
-    d3El = d3.select(elem['arc'])
+    d3v2El = d3v2.select(elem['arc'])
 
     elem['thick'] = thick if thick
-    d3El.attr('d', arc(thick*arcThickness)(elem)) if thick
+    d3v2El.attr('d', arc(thick*arcThickness)(elem)) if thick
 
 
-    d3El.attr('fill', fill) if fill
+    d3v2El.attr('fill', fill) if fill
 
   moveArc = (elem, t1, t2, f1, f2, t, cb) ->
     setArc elem, t1, f1
 
     t1 = elem['thick'] unless t1
 
-    d3El = d3.select(elem['arc'])
-    trans = d3El.transition().ease('linear').duration(t*simTime)
+    d3v2El = d3v2.select(elem['arc'])
+    trans = d3v2El.transition().ease('linear').duration(t*simTime)
 
     trans.attrTween('d', arcTween elem, t1, t2) if t2
     trans.attr("fill", f2) if f2
@@ -185,9 +185,9 @@ main = () ->
 
     moveState el, false, el['plot'][1], t, () ->
       setState el, el['cong1']
-      d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius*1.5).attr("fill", "red")
+      d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius*1.5).attr("fill", "red")
       .each "end", () ->
-        d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill'])
+        d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill'])
         .each "end", cb
 
     moveArc el, false, fatLinkFactor, false, false, t, () ->
@@ -201,12 +201,12 @@ main = () ->
     moveState el, false, el['plot'][1], t, () ->
       setState el, el['cong1']
       setState arcData[0], arcData[0]['cong2']
-      d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius*1.5).attr("fill", "red")
+      d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius*1.5).attr("fill", "red")
       .each "end", () ->
-        d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill'])
-      d3.select(arcData[0]['plot-state']).transition().duration(tBounce).attr("r", stateRadius*1.5)
+        d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill'])
+      d3v2.select(arcData[0]['plot-state']).transition().duration(tBounce).attr("r", stateRadius*1.5)
       .each "end", () ->
-        d3.select(arcData[0]['plot-state']).transition().duration(tBounce).attr("r", stateRadius)
+        d3v2.select(arcData[0]['plot-state']).transition().duration(tBounce).attr("r", stateRadius)
 
 
     moveArc el, false, fatLinkFactor, false, false, t, () ->
@@ -220,9 +220,9 @@ main = () ->
     moveMeter false, 0, t, () -> ""
 
     moveState el, false, el['plot'][1], t, () ->
-      d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius*1.5).attr("fill", "red")
+      d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius*1.5).attr("fill", "red")
       .each "end", () ->
-        d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill'])
+        d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill'])
 
     moveArc el, false, fatLinkFactor, false, false, t, cb
 
@@ -261,7 +261,7 @@ main = () ->
 
   $("#reset").click clickReset
 
-  meterSVG = d3.select("#meter-section").append("svg")
+  meterSVG = d3v2.select("#meter-section").append("svg")
   .attr("id", "meter-svg")
   .attr("width", wMeter)
   .attr("height", hMeter)
@@ -279,7 +279,7 @@ main = () ->
   resetMeter()
 
 
-  networkSVG = d3.select("#network-section svg")
+  networkSVG = d3v2.select("#network-section svg")
   .attr("width", wNetwork)
   .attr("height", hNetwork)
 
@@ -299,7 +299,7 @@ main = () ->
 
   # create plotting background
 
-  plotSVG = d3.select("#plot-section").append("svg")
+  plotSVG = d3v2.select("#plot-section").append("svg")
   .attr("id", "plot-svg")
   .attr("width", wPlot)
   .attr("height", hPlot)
@@ -326,7 +326,7 @@ main = () ->
   .attr("x2", 0)
   .attr("y2", axisLength*1.1)
 
-  plotLine = d3.svg.line()
+  plotLine = d3v2.svg.line()
   .x((p) -> p[0])
   .y((p) -> p[1])
 
@@ -349,7 +349,7 @@ main = () ->
 
 
   arc = (thickness) ->
-    d3.svg.arc()
+    d3v2.svg.arc()
     .innerRadius((r) -> r['r'] - thickness / 2)
     .outerRadius((r) -> r['r'] + thickness / 2)
     .startAngle((r) -> arcEndAngles(r['r'])[0])
@@ -374,7 +374,7 @@ main = () ->
     (a) =>
       prev = arc(arcThickness*t1)(data)
       next = arc(arcThickness*t2)(data)
-      d3.interpolate prev, next
+      d3v2.interpolate prev, next
 
   clickReset()
 

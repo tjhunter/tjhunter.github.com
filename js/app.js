@@ -146,35 +146,35 @@
       return meter.transition().ease('linear').duration(t * simTime).attr("height", hMeter * b).each("end", cb);
     };
     setState = function(elem, p1) {
-      return d3.select(elem['plot-state']).attr('cx', p1[0]).attr('cy', p1[1]);
+      return d3v2.select(elem['plot-state']).attr('cx', p1[0]).attr('cy', p1[1]);
     };
     moveState = function(elem, p1, p2, t, cb) {
       if (p1) {
         setState(elem, p1);
       }
-      return d3.select(elem['plot-state']).transition().ease('linear').duration(t * simTime).attr('cx', p2[0]).attr('cy', p2[1]).each("end", cb);
+      return d3v2.select(elem['plot-state']).transition().ease('linear').duration(t * simTime).attr('cx', p2[0]).attr('cy', p2[1]).each("end", cb);
     };
     setArc = function(elem, thick, fill) {
-      var d3El;
-      d3El = d3.select(elem['arc']);
+      var d3v2El;
+      d3v2El = d3v2.select(elem['arc']);
       if (thick) {
         elem['thick'] = thick;
       }
       if (thick) {
-        d3El.attr('d', arc(thick * arcThickness)(elem));
+        d3v2El.attr('d', arc(thick * arcThickness)(elem));
       }
       if (fill) {
-        return d3El.attr('fill', fill);
+        return d3v2El.attr('fill', fill);
       }
     };
     moveArc = function(elem, t1, t2, f1, f2, t, cb) {
-      var d3El, trans;
+      var d3v2El, trans;
       setArc(elem, t1, f1);
       if (!t1) {
         t1 = elem['thick'];
       }
-      d3El = d3.select(elem['arc']);
-      trans = d3El.transition().ease('linear').duration(t * simTime);
+      d3v2El = d3v2.select(elem['arc']);
+      trans = d3v2El.transition().ease('linear').duration(t * simTime);
       if (t2) {
         trans.attrTween('d', arcTween(elem, t1, t2));
       }
@@ -215,8 +215,8 @@
       });
       moveState(el, false, el['plot'][1], t, function() {
         setState(el, el['cong1']);
-        return d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius * 1.5).attr("fill", "red").each("end", function() {
-          return d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill']).each("end", cb);
+        return d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius * 1.5).attr("fill", "red").each("end", function() {
+          return d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill']).each("end", cb);
         });
       });
       return moveArc(el, false, fatLinkFactor, false, false, t, function() {
@@ -233,11 +233,11 @@
       moveState(el, false, el['plot'][1], t, function() {
         setState(el, el['cong1']);
         setState(arcData[0], arcData[0]['cong2']);
-        d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius * 1.5).attr("fill", "red").each("end", function() {
-          return d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill']);
+        d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius * 1.5).attr("fill", "red").each("end", function() {
+          return d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill']);
         });
-        return d3.select(arcData[0]['plot-state']).transition().duration(tBounce).attr("r", stateRadius * 1.5).each("end", function() {
-          return d3.select(arcData[0]['plot-state']).transition().duration(tBounce).attr("r", stateRadius);
+        return d3v2.select(arcData[0]['plot-state']).transition().duration(tBounce).attr("r", stateRadius * 1.5).each("end", function() {
+          return d3v2.select(arcData[0]['plot-state']).transition().duration(tBounce).attr("r", stateRadius);
         });
       });
       return moveArc(el, false, fatLinkFactor, false, false, t, function() {
@@ -254,8 +254,8 @@
         return "";
       });
       moveState(el, false, el['plot'][1], t, function() {
-        return d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius * 1.5).attr("fill", "red").each("end", function() {
-          return d3.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill']);
+        return d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius * 1.5).attr("fill", "red").each("end", function() {
+          return d3v2.select(el['plot-state']).transition().duration(tBounce).attr("r", stateRadius).attr("fill", el['fill']);
         });
       });
       return moveArc(el, false, fatLinkFactor, false, false, t, cb);
@@ -299,18 +299,18 @@
     };
     $("#demo").click(clickDemo);
     $("#reset").click(clickReset);
-    meterSVG = d3.select("#meter-section").append("svg").attr("id", "meter-svg").attr("width", wMeter).attr("height", hMeter).append("g").attr("transform", "translate({0},{1}) scale(1,-1)".format(0, hMeter));
+    meterSVG = d3v2.select("#meter-section").append("svg").attr("id", "meter-svg").attr("width", wMeter).attr("height", hMeter).append("g").attr("transform", "translate({0},{1}) scale(1,-1)".format(0, hMeter));
     meterContainer = meterSVG.append("rect").attr("id", "meter-container").attr("width", wMeter).attr("height", hMeter);
     meter = meterSVG.append("rect").attr("id", "meter").attr("width", wMeter);
     resetMeter();
-    networkSVG = d3.select("#network-section svg").attr("width", wNetwork).attr("height", hNetwork);
+    networkSVG = d3v2.select("#network-section svg").attr("width", wNetwork).attr("height", hNetwork);
     sourceNode = networkSVG.append("circle").attr("id", "source-node").attr("class", "network-node").attr("cx", source[0]).attr("cy", source[1]).attr("r", source[2]);
     sinkNode = networkSVG.append("circle").attr("id", "sink-node").attr("class", "network-node").attr("cx", sink[0]).attr("cy", sink[1]).attr("r", sink[2]);
-    plotSVG = d3.select("#plot-section").append("svg").attr("id", "plot-svg").attr("width", wPlot).attr("height", hPlot);
+    plotSVG = d3v2.select("#plot-section").append("svg").attr("id", "plot-svg").attr("width", wPlot).attr("height", hPlot);
     axis = plotSVG.append("g").attr("transform", "translate({0},{1}) scale(1, -1) ".format(wPlot * .1, hPlot * .9));
     xAxis = axis.append("line").attr("class", "axis-line").attr("x1", 0).attr("y1", 0).attr("x2", axisLength * 1.3).attr("y2", 0);
     yAxis = axis.append("line").attr("class", "axis-line").attr("x1", 0).attr("y1", 0).attr("x2", 0).attr("y2", axisLength * 1.1);
-    plotLine = d3.svg.line().x(function(p) {
+    plotLine = d3v2.svg.line().x(function(p) {
       return p[0];
     }).y(function(p) {
       return p[1];
@@ -328,7 +328,7 @@
       return d['plot-state'] = this;
     });
     arc = function(thickness) {
-      return d3.svg.arc().innerRadius(function(r) {
+      return d3v2.svg.arc().innerRadius(function(r) {
         return r['r'] - thickness / 2;
       }).outerRadius(function(r) {
         return r['r'] + thickness / 2;
@@ -354,7 +354,7 @@
         var next, prev;
         prev = arc(arcThickness * t1)(data);
         next = arc(arcThickness * t2)(data);
-        return d3.interpolate(prev, next);
+        return d3v2.interpolate(prev, next);
       };
     };
     return clickReset();
