@@ -108,8 +108,6 @@ $(document).ready(function(){
 
 		}
 		else $('#contentHolder').html(element.data('cache'));
-
-		e.preventDefault();
 	})
 
 	/* Emulating a click on the first tab so that the content area is not empty: */
