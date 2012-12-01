@@ -1,6 +1,3 @@
-body {
-  margin-top: 50px;
-}
 
 svg {
 }
@@ -23,7 +20,6 @@ svg {
   width: 100%;
   height: 100%;
 }
-
 
 #meter {
   fill: url(#meter-gradient);
@@ -58,4 +54,13 @@ svg {
 
 #meter-section {
   margin-top: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.svg-box {
+  margin: 1em;
+  float: left;
 }

@@ -16,16 +16,16 @@
 
   main = function() {
     var PI, a1, a2, a3, arc, arcData, arcEndAngles, arcThickness, arcTween, arcs, axis, axisLength, b1, b2, b3, clickDemo, clickReset, congLinkFactor, fatLinkFactor, fillLink1, fillLink2, fillLink3, fillToCapacity, hMeter, hNetwork, hPlot, meter, meterContainer, meterSVG, moveArc, moveMeter, moveState, networkSVG, nextState, nodeRadius, plotLine, plotSVG, plotStates, plots, reset, resetArcs, resetMeter, resetStates, runStateAction, setArc, setMeter, setState, simTime, sink, sinkNode, source, sourceNode, state, stateRadius, superCongLinkFactor, tBounce, updateButton, updateStatus, wMeter, wNetwork, wPlot, xArc, xAxis, xNodePad, yArc, yAxis, yNodePad;
-    wMeter = 75;
+    wMeter = 50;
     hMeter = 300;
     PI = Math.PI;
     simTime = 10000;
-    wNetwork = 550;
-    hNetwork = 400;
-    wPlot = 550;
+    wNetwork = 350;
+    hNetwork = 150;
+    wPlot = 350;
     hPlot = 400;
     axisLength = hPlot * .8;
-    stateRadius = 20;
+    stateRadius = wNetwork / 20;
     fatLinkFactor = 4;
     congLinkFactor = 3;
     superCongLinkFactor = 2;
@@ -36,6 +36,10 @@
     b1 = axisLength * .95;
     b2 = axisLength * .7;
     b3 = axisLength * .45;
+    nodeRadius = wNetwork / 10;
+    arcThickness = wNetwork / 30;
+    xNodePad = nodeRadius * 1.5;
+    yNodePad = hNetwork * .65;
     state = 0;
     nextState = function() {
       return state = state < 4 ? state + 1 : 0;
@@ -70,7 +74,7 @@
       var text;
       switch (state) {
         case 0:
-          text = "Start Demo";
+          text = "Start";
           break;
         case 1:
           text = "Next";
@@ -105,24 +109,20 @@
         "name": "a",
         "fill": "black"
       }, {
-        "r": 350,
+        "r": 180,
         "name": "b",
         "cong1": [b2 - a3 + a2, a3],
         "congf": [b2 - a3 - b3 + a2, a3 + b3],
         "plot": [[0, a2], [b2, a2], [0, a2 + b2]],
         "fill": "blue"
       }, {
-        "r": 250,
+        "r": 130,
         "name": "c",
         "plot": [[0, a3], [b3, a3], [0, a3 + b3]],
         "congf": [0, a3 + b3],
         "fill": "yellow"
       }
     ];
-    nodeRadius = 40;
-    arcThickness = 10;
-    xNodePad = nodeRadius * 1.5;
-    yNodePad = hNetwork / 2;
     source = [xNodePad, yNodePad, nodeRadius];
     sink = [wNetwork - xNodePad, yNodePad, nodeRadius];
     xArc = wNetwork / 2;
