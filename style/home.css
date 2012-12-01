@@ -19,7 +19,7 @@
 }
 
 #featured {
-  background: url(../img/stripe.jpg);
+  background: url(../img/cool-background.png);
 }
 
 #me {
@@ -57,4 +57,38 @@ div.sociallinks a { border:none; }
 }
 
 #nash-paragraph {
+}
+
+#ishake-carousel, #clearsky-carousel {
+  width: 200px;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#ishake-carousel img, #clearsky-carousel img {
+  width: 200px;
+}
+
+#cache-carousel, #convex-carousel {
+  width: 400px;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#cache-carousel img, #convex-carousel img  {
+  width: 400px;
+}
+
+
+
+#buildit-youtube {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#trust-table {
+  vertical-align: top;
 }

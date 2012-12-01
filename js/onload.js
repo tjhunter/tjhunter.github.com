@@ -27,6 +27,6 @@ $('.scrollPage').click(function() {
 
 $('.carousel').carousel({
   interval: false
-})
+});
 
 });

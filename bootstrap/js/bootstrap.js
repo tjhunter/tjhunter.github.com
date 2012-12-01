@@ -394,7 +394,7 @@
   }
 
   $.fn.carousel.defaults = {
-    interval: 5000
+    interval: 50000000
   , pause: 'hover'
   }
 
