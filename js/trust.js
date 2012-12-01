@@ -2,47 +2,25 @@ $(document).ready(function(){
 	/* This code is executed after the DOM has been completely loaded */
 
 	/* Defining an array with the tab text and AJAX pages: */
-	var Tabs = {
-		'Year 1'	: 'trials/step1/nx_js_d3_graph.json',
-		'Year 2'	: 'trials/step2/nx_js_d3_graph.json',
-		'Year 3'	: 'trials/step3/nx_js_d3_graph.json',
-		'Year 4'	: 'trials/step4/nx_js_d3_graph.json',
-	}
-
-	/* The available colors for the tabs: */
-	var colors = ['blue','green','red','orange'];
-
-	/* The colors of the line above the tab when it is active: */
-	var topLineColor = {
-		blue:'lightblue',
-		green:'lightgreen',
-		red:'red',
-		orange:'orange'
-	}
-
+	var years = [
+	[$('#collapseOne'), 'trials/step1/nx_js_d3_graph.json'],
+	[$('#collapseTwo'), 'trials/step2/nx_js_d3_graph.json'],
+	[$('#collapseThree'), 'trials/step3/nx_js_d3_graph.json'],
+	[$('#collapseFour'), 'trials/step4/nx_js_d3_graph.json']
+	]
 	/* Looping through the Tabs object: */
 	var z=0;
 	var counter = 0;
-	$.each(Tabs,function(i,j){
-		counter ++;
-		/* Sequentially creating the tabs and assigning a color from the array: */
-		var tmp = $('<li><a href="#" class="tab '+colors[(z++%4)]+'">'+i+' <span class="left" /><span class="right" /></a></li>');
-
-		/* Setting the page data for each hyperlink: */
-		tmp.find('a').data('page',j).data('sidelink','y' + counter + 'link');
-
-		/* Adding the tab to the UL container: */
-		$('ul.tabContainer').append(tmp);
+	$.each(years,function(i, year){
+		year[0].data('page', year[1]);
 	})
 
 	/* Caching the tabs into a variable for better performance: */
-	var the_tabs = $('.tab');
+	var collapses = $(".accordion-body");
 
-	the_tabs.click(function(e){
+	collapses.on('show', function() {
 		/* "this" points to the clicked tab hyperlink: */
 		var element = $(this);
-
-		$('#' + element.data('sidelink')).click();
 
 		var powFactor = .6;
 		if (element.data('sidelink') == 'y4link')
@@ -64,7 +42,7 @@ $(document).ready(function(){
 			css:{
 				display:'none',
 				width:element.outerWidth()-2,
-				background:topLineColor[bg] || 'white'
+				background: 'white'
 			}}).appendTo(element).fadeIn('slow');
 
 		/* Checking whether the AJAX fetched page has been cached: */
@@ -135,5 +113,5 @@ $(document).ready(function(){
 	})
 
 	/* Emulating a click on the first tab so that the content area is not empty: */
-	the_tabs.eq(0).click();
+	$("#collapseOne").collapse('show');
 });
