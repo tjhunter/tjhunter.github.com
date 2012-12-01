@@ -24,4 +24,9 @@ $('.scrollPage').click(function() {
  $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-40}, 300 );
  return false;
 });
+
+$('.carousel').carousel({
+  interval: false
+})
+
 });

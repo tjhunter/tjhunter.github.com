@@ -48,3 +48,13 @@ div.sociallinks a { border:none; }
 #scenicgps .carousel {
   width: 300px;
 }
+
+#nash-stackelberg .carousel {
+  width: 400px;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#nash-paragraph {
+}
