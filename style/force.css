@@ -8,8 +8,6 @@ line.link {
   stroke-opacity: .6;
 }
 
-.nodetext { pointer-events: none; font: 10px; }
-
 
 .accordion {
   width: 400px;
