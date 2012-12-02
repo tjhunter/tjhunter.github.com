@@ -59,25 +59,25 @@ div.sociallinks a { border:none; }
 #nash-paragraph {
 }
 
-#ishake-carousel, #clearsky-carousel {
+#ishake-carousel {
   width: 200px;
   float: right;
   margin-left: 10px;
   margin-bottom: 10px;
 }
 
-#ishake-carousel img, #clearsky-carousel img {
+#ishake-carousel img {
   width: 200px;
 }
 
-#cache-carousel, #convex-carousel {
+#cache-carousel, #convex-carousel, #clearsky-carousel {
   width: 400px;
   float: right;
   margin-left: 10px;
   margin-bottom: 10px;
 }
 
-#cache-carousel img, #convex-carousel img  {
+#cache-carousel img, #convex-carousel img, #clearsky-carousel img  {
   width: 400px;
 }
 
