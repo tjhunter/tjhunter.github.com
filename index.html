@@ -98,9 +98,25 @@
                             <li>References: <a href="#2">2</a> <a href="#5">5</a> <a href="#6">6</a> <a href="#7">7</a></li>
                           </ul>
 
-                          <li>Using game-theoretic concepts to analyze and implement partial-control routing problems. <a href="#4">4</a> <a href="#2">2</a> <a href="#5">5</a> <a href="#6">6</a> <a href="#7">7</a></li>
+                          <li>Using game-theoretic concepts to analyze and implement partial-control routing problems.
+                            <ul>
+                              <li>
+                                References: <a href="#4">4</a> <a href="#2">2</a> <a href="#5">5</a> <a href="#6">6</a> <a href="#7">7</a>
+                              </li>
+                              <li>
+                                See <a href="#optimal-rerouting" class="scrollPage">Eulerian/Lagrangian</a> and <a href="#nash-stackelberg" class="scrollPage">Nash/Stackelberg</a> work below.
+                              </li>
+                            </ul>
+                          </li>
                           <li>Applications to traffic systems and cloud-based architectures</li>
                         </ul>
+                      <h3>Adjoint-based Freeway Control</h3>
+                      Using the adjoint of a PDE system (discretized or continuous), one can sometimes greatly reduce the complexity of computing the gradient of an objective with respect to some control parameters. In our work, the state-space is usually of a greater complexity than the control space, which enables the effective use of the adjoint system. We seek to apply the method to a number of control problems in order to have optimal policies generated from realistic underlying physical models. This work is done as a collaboration with <a href="http://eecs.berkeley.edu/~walid">Walid Krichene</a>, <a href="http://www.linkedin.com/in/samitha">Samitha Samaranayake</a>, and Maria Laura Delle Monache, and as a part of the <a href="http://www-sop.inria.fr/members/Paola.Goatin/ORESTE/index.html">ORESTE</a> collaboration with <a href="http://www.inria.fr/en/">INRIA</a> in France.
+                      <ul>
+                        <li>Coordinating ramp metering lights to reduce congestion on freeways.</li>
+                        <li>Multi-source, multi-sink optimal rerouting policies using network-based PDE models.</li>
+                        <li>Developing PDE models for accurate modeling of general onramp/offramp junctions and incorporating ODE buffer models for strong boundary conditions.</li>
+                      </ul>
                         <h3>Distributed Optimization</h3>
                         <ul>
                           <li>Iterative, in-memory map-reduce algorithms for large-scale machine learning
@@ -191,7 +207,7 @@
                               </div>
                               <hr>
                               <div id="optimal-rerouting">
-                                <h2>Optimal Rerouting with Partial Compliance</h2>
+                                <h2>Optimization-based Framework for Rerouting a Subset of Users with Mixed Lagrangian-Eulerian Demand</h2>
                                 <div id="convex-carousel" class="carousel slide">
                                   <div class="carousel-inner">
                                     <div class="active item"><img src="img/convex1.png" /></div>
@@ -221,10 +237,12 @@
                                         <a class="carousel-control right" href="#ishake-carousel" data-slide="next">&rsaquo;</a>
                                       </div>
                                       Emergency responders must "see" the effects of a major earthquake clearly and rapidly so that they can effectively respond to the damage it has produced. The goal of the iShake project is to create a system that moves beyond DYFI ("Did You Feel It?") by taking advantage of the accelerometers most people have already in their cell phones, which would collect ground motion intensity parameters during the earthquake, so that an accurate portrayal of the damage effects of an earthquake can be provided to government officials and emergency responders immediately after an event.
-
+                                      <p>
                                       Through iShake people will be able to make use of their own smart phones and participate in an effective and valuable process to inform emergency responders in the event of an earthquake.
-
+                                      <p>
                                       I developed the <a href="http://github.com/jackdreilly/iShakeGCode">iShake iPhone application</a> and the <a href="http://github.com/jackdreilly/iShakeBackend">backend server</a> to collect the accelerometer and GPS information. I also worked on developing filtering techniques for coping with the variable environments in which the samples could be taken.
+                                      <p>
+                                        See <a href="#1">1</a>, <a href="#3">3</a>, <a href="#8">8</a>, <a href="#10">10</a></li> for publications, and check out the <a href="http://ishakeberkeley.appspot.com">official site</a>.
                                     </div>
                                     <hr>
                                     <div id="clearsky">
@@ -241,7 +259,7 @@
                                       </div>
                                       The ClearSky project aimed to create real-time pollution maps based on live traffic estimations, current weather conditions and dispersion models. Additionally, there were efforts made to have standalone sensors attached to municipal vehicles to get "ground-truth" measurements to supplement the map creation.
                                       <p>
-                                        I contributed to the project by desigining and implement the system architecture that allowed the submodules to communicate and database design.Additionally, I set up the feed that allowed the standalone sensors to feed back to the server via UDP.
+                                        I contributed to the project by desigining and implement the system architecture that allowed the submodules to communicate and database design. Additionally, I set up the feed that allowed the standalone sensors to feed back to the server via UDP.
                                       </div>
                                       <hr>
                                       <div id="cachereduce">
