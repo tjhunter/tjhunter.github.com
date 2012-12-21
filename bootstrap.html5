@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <!-- Le styles -->
-  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-  <style type="text/css">
+<!--   <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+<!--  <style type="text/css">
     body {
       padding-top: 60px;
       padding-bottom: 40px;
@@ -15,9 +15,10 @@
     .sidebar-nav {
       padding: 9px 0;
     }
-  </style>
-  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-  <link href="bootstrap-pandoc.css" rel="stylesheet">
+  </style>-->
+<!--   <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet"> -->
+<!--   <link href="bootstrap-pandoc.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="style/home.css" type="text/css">
   <link rel="stylesheet" href="style/force.css">
   <link rel="stylesheet" href="style/app.css" type="text/css">
@@ -99,9 +100,20 @@ $endif$
     </div>
   </div>
 
+    <div id="featured">
+   <div style="width:920px; margin:0 auto;">
+    <div class="social">
+     <div class="sociallinks">
+      <a href="http://github.com/jackdreilly"><img src="img/github.png" class="socialicon" /></a>
+      <a href="http://berkeley.academia.edu/JackReilly"><img src="img/academia.png" class="socialicon" /></a>
+      <a href="http://www.linkedin.com/profile/view?id=103745509"><img src="img/linkedin.png" class="socialicon" /></a>
+      <a href="http://www.mendeley.com/profiles/jack-reilly1/"><img src="img/mendeley.png" class="socialicon" /></a>
+    </div>
+  </div>
   
   <div class="container">
-$for(include-before)$
+<!--  
+  $for(include-before)$
 $include-before$
 $endfor$
         <header class="hero-unit" id="header">
@@ -110,28 +122,30 @@ $if(title)$
 $for(author)$
           <h2 class="author">$author$</h2>
 $endfor$
-$if(date)$
-          <h3 class="date">$date$</h3>
-$endif$
         </header>
 $endif$
+-->
     <div class="row-fluid">
+    
+    
 $if(toc)$
       <nav id="$idprefix$TOC" class="span4">
         <div class="well sidebar-nav">
           <ul class="nav nav-list">
-            <li class="nav-header">Table of Contents</li>
+<!--             <li class="nav-header">Table of Contents</li> -->
 $toc$
-            <li class="active"><a href="#">Link</a></li>
+<!--             <li class="active"><a href="#">Link</a></li> -->
           </ul>
         </div><!--/.well -->
       </nav><!--/span-->
 $endif$
-      <div class="span8">
-          <div class="span12">
+
+
+<!--       <div class="span8"> -->
+<!--           <div class="span12"> -->
 $body$
-          </div><!--/span-->
-      </div><!--/span-->
+          <!--</div>--><!--/span-->
+      <!--</div>--><!--/span-->
     </div><!--/row-->
 
     <hr>
@@ -142,6 +156,10 @@ $body$
     </footer>
 
   </div><!--/.fluid-container-->
+  
+  </div>
+  </div>
+  
   <!-- Le javascript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->

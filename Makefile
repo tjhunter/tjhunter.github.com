@@ -9,7 +9,7 @@ PATH=$(shell 'pwd')
 
 # Make the examples
 pages:
-	${PANDOC} "page.md" --toc --standalone --smart --toc --template bootstrap.html5 --output="index2.html"
+	${PANDOC} "page.md" --standalone --smart --template bootstrap.html5 --output="index2.html"
 # ${PANDOC} "examples/Pandoc-README.markdown" --toc --standalone --smart --toc --number-sections --template bootstrap.html5 --output="output/Pandoc-README.generated.html"
 # ${PANDOC} "examples/book-curie-radio-de/curie.md" --toc --standalone --smart --toc --number-sections --template bootstrap.html5 --output="output/curie-radio-de.html"
 # new pandoc version (>1.9):

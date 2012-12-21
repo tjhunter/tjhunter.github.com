@@ -2,9 +2,10 @@
 % Timothy Hunter
 % 2012-12-20
 
+<div class="hero-unit">
+
 Hello!
 ======
-
 
 
 My name is Ghada El Abed.
@@ -19,6 +20,9 @@ This web page was written in the extended Markdown format and processed using [p
 Why bother with HTML or Latex when you can directly write the output in 
 [natural language](https://github.com/tjhunter/tjhunter.github.com/blob/master/hqviz.html)?
 
+</div>
+<div class="hero-unit">
+
 Research
 =========
 
@@ -31,6 +35,10 @@ Path inference
 
 Large scale estimation
 -----------------------
+
+</div>
+<div class="hero-unit">
+
 
 Publications
 =============
@@ -101,3 +109,10 @@ Older publications
     }
     ```
 
+</div>
+<div class="hero-unit">
+
+Trivia
+======
+
+</div>
