@@ -5,6 +5,8 @@
 Hello!
 ======
 
+
+
 My name is Ghada El Abed.
 
 This is:
@@ -12,6 +14,10 @@ This is:
  - 1
  
  - gor
+ 
+This web page was written in the extended Markdown format and processed using [pandoc](http://johnmacfarlane.net/pandoc/).
+Why bother with HTML or Latex when you can directly write the output in 
+[natural language](https://github.com/tjhunter/tjhunter.github.com/blob/master/hqviz.html)?
 
 Research
 =========
