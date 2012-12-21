@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <!-- Le styles -->
-  <link href="twitter-bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
   <style type="text/css">
     body {
       padding-top: 60px;
@@ -16,8 +16,11 @@
       padding: 9px 0;
     }
   </style>
-  <link href="twitter-bootstrap/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
   <link href="bootstrap-pandoc.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/home.css" type="text/css">
+  <link rel="stylesheet" href="style/force.css">
+  <link rel="stylesheet" href="style/app.css" type="text/css">
 $for(author-meta)$
   <meta name="author" content="$author-meta$">
 $endfor$
@@ -30,11 +33,11 @@ $endif$
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <!-- Le fav and touch icons -->
-  <link rel="shortcut icon" href="twitter-bootstrap/bootstrap/ico/favicon.ico">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="twitter-bootstrap/bootstrap/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="twitter-bootstrap/bootstrap/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="twitter-bootstrap/bootstrap/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="twitter-bootstrap/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="bootstrap/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
 $if(quotes)$
   <style type="text/css">
     q { quotes: "“" "”" "‘" "’"; }
@@ -56,9 +59,9 @@ $for(header-includes)$
 $endfor$
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbarExample" data-offset="200">
 
-  <div class="navbar navbar-fixed-top">
+<!--  <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -78,11 +81,25 @@ $endif$
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  	<div id="navbarExample" class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container">
+        <a class="scrollPage brand" href="#masthead">$author-meta$</a>
+        <ul class="nav">
+          <li><a class="scrollPage" href="#aboutme">About Me</a></li>
+          <li><a class="scrollPage" href="#research">Research</a></li>
+          <li><a class="scrollPage" href="#publications">Publications</a></li>
+        </ul>
       </div>
     </div>
   </div>
 
+  
   <div class="container">
 $for(include-before)$
 $include-before$
@@ -128,8 +145,8 @@ $body$
   <!-- Le javascript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="twitter-bootstrap/bootstrap/js/jquery.js"></script>
-  <script src="twitter-bootstrap/bootstrap/js/bootstrap.js"></script>
+  <script src="bootstrap/js/jquery.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
 
 $for(include-after)$
 $include-after$
