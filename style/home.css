@@ -1,15 +1,20 @@
 
 #masthead {
-  margin: 0;
-  padding: 0 0 0px 0;
-  height: 17em;
-  background: url(../img/masthead.png);
+/*   width: 500px; */
+/*   margin: 0; */
+  padding: 0 0px 60px 0;
+  height: 10em;
+/*   float: right; */
+  margin-left: 200px;
+  margin-right: 200px;
+  background: transparent url(../img/banner.jpg) no-repeat;}
+/*   background: url(../img/yos.png); */
   /*
   border-bottom: #222 10px solid;
   */
 }
 
-#masthead h1 { text-indent: -3000px; }
+/* #masthead h1 { text-indent: -3000px; } */
 
 .socialicon {
   float: right;
@@ -18,13 +23,17 @@
   height: 50px;
 }
 
-#featured {
+pre.sourceCode{display:none;}
+
+.hidebibtex { display: none; }
+
+/*#featured {
   background: url(../img/cool-background.png);
-}
+}*/
 
 #me {
-  width: 275px;
-  float: left;
+  width: 175px;
+  float: right;
   margin-right: 20px;
   border-radius: 15px;
 }
@@ -83,7 +92,7 @@ div.sociallinks a { border:none; }
 
 
 
-#buildit-youtube {
+/*#buildit-youtube {
   float: right;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -91,4 +100,4 @@ div.sociallinks a { border:none; }
 
 #trust-table {
   vertical-align: top;
-}
+}*/
