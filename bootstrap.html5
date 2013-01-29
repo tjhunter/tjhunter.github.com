@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html$if(lang)$ lang="$lang$"$endif$>
 <head>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21081850-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +31,8 @@
   </style>-->
 <!--   <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet"> -->
 <!--   <link href="bootstrap-pandoc.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="style/autogen.css" type="text/css">
+<!--   <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css"> -->
   <link rel="stylesheet" href="style/home.css" type="text/css">
   <link rel="stylesheet" href="style/force.css">
   <link rel="stylesheet" href="style/app.css" type="text/css">
@@ -90,9 +104,9 @@ $endif$
   	<div id="navbarExample" class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container">
-        <a class="scrollPage brand" href="#masthead">$author-meta$</a>
         <ul class="nav">
-          <li><a class="scrollPage" href="#aboutme">About Me</a></li>
+          <li><a class="scrollPage" href="#about">About me</a></li>
+          <li><a class="scrollPage" href="#contact">Contact</a></li>
           <li><a class="scrollPage" href="#research">Research</a></li>
           <li><a class="scrollPage" href="#publications">Publications</a></li>
         </ul>
@@ -100,19 +114,34 @@ $endif$
     </div>
   </div>
 
+    <div id="masthead">
+<!--     <h1>Jack Reilly</h1> -->
+  </div>
+  
     <div id="featured">
    <div style="width:920px; margin:0 auto;">
-    <div class="social">
+<!--    <div class="social">
      <div class="sociallinks">
       <a href="http://github.com/jackdreilly"><img src="img/github.png" class="socialicon" /></a>
       <a href="http://berkeley.academia.edu/JackReilly"><img src="img/academia.png" class="socialicon" /></a>
       <a href="http://www.linkedin.com/profile/view?id=103745509"><img src="img/linkedin.png" class="socialicon" /></a>
       <a href="http://www.mendeley.com/profiles/jack-reilly1/"><img src="img/mendeley.png" class="socialicon" /></a>
     </div>
-  </div>
+  </div>-->
   
   <div class="container">
-<!--  
+  
+  <header class="hero-unit" id="header">
+$for(author)$
+          <h2 class="author">$author$</h2>
+$endfor$
+$if(title)$
+          <h2 class="title">$title$</h2>
+$endif$
+  </header>
+
+  
+  <!--  
   $for(include-before)$
 $include-before$
 $endfor$
@@ -142,17 +171,16 @@ $endif$
 
 
 <!--       <div class="span8"> -->
-<!--           <div class="span12"> -->
+          <div class="span12">
 $body$
-          <!--</div>--><!--/span-->
-      <!--</div>--><!--/span-->
-    </div><!--/row-->
+<!--           </div> -->
+      </div>  <!--/span-->
+    </div>  <!--/row-->
 
     <hr>
 
     <footer>
       <p class="author">$for(author)$$author$$sep$, $endfor$$if(date)$, $date$.$else$.$endif$</p>
-      <p class="credit">Created with <a href="http://johnmacfarlane.net/pandoc/">pandoc</a>, styled with <a href="http://twitter.github.com/bootstrap/">bootstrap</a>.</p>
     </footer>
 
   </div><!--/.fluid-container-->
@@ -163,11 +191,14 @@ $body$
   <!-- Le javascript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="bootstrap/js/jquery.js"></script>
+  <script src="js/jquery.js"></script>
   <script src="bootstrap/js/bootstrap.js"></script>
+  <script src="js/bibtex.js"></script>
 
 $for(include-after)$
 $include-after$
 $endfor$
+
+
 </body>
 </html>

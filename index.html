@@ -1,609 +1,313 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21081850-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
   <meta charset="utf-8">
-  <title>Jack D. Reilly</title>
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <!-- Le styles -->
+<!--   <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+<!--  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+    .sidebar-nav {
+      padding: 9px 0;
+    }
+  </style>-->
+<!--   <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet"> -->
+<!--   <link href="bootstrap-pandoc.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="style/autogen.css" type="text/css">
+<!--   <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css"> -->
   <link rel="stylesheet" href="style/home.css" type="text/css">
   <link rel="stylesheet" href="style/force.css">
   <link rel="stylesheet" href="style/app.css" type="text/css">
+  <meta name="author" content="Timothy J. Hunter">
+  <meta name="dcterms.date" content="2012-12-20">
+  <title>Ph. D. Student, Computer Science, UC Berkeley</title>
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- Le fav and touch icons -->
+  <link rel="shortcut icon" href="bootstrap/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
 </head>
+
 <body data-spy="scroll" data-target="#navbarExample" data-offset="200">
-	<div id="navbarExample" class="navbar navbar-fixed-top navbar-inverse">
+
+<!--  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">Ph. D. Student, Computer Science, UC Berkeley</a>
+        <div class="nav-collapse collapse">
+          <p class="navbar-text pull-right">
+            Logged in as <a href="#" class="navbar-link">Username</a>
+          </p>
+          <ul class="nav">
+            <li class="active"><a href="#header">Start</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  	<div id="navbarExample" class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container">
-        <a class="scrollPage brand" href="#masthead">Jack Reilly</a>
         <ul class="nav">
-          <li><a class="scrollPage" href="#aboutme">About Me</a></li>
+          <li><a class="scrollPage" href="#about">About me</a></li>
+          <li><a class="scrollPage" href="#contact">Contact</a></li>
           <li><a class="scrollPage" href="#research">Research</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
-              Academic Work
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-              <li><a class="scrollPage" href="#nash-stackelberg">Nash/Stackelberg</a></li>
-              <li><a class="scrollPage" href="#optimal-rerouting">Optimal Rerouting</a></li>
-              <li><a class="scrollPage" href="#ishake">iShake</a></li>
-              <li><a class="scrollPage" href="#clearsky">ClearSky</a></li>
-              <li><a class="scrollPage" href="#cachereduce">CacheReduce</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#projects">
-              Projects
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-              <li><a class="scrollPage" href="#trustscore">TrustScore</a></li>
-              <li><a class="scrollPage" href="#buildit">Team Buildit</a></li>
-              <li><a class="scrollPage" href="#jdr">JDR Music System</a></li>
-              <li><a class="scrollPage" href="#scenicgps">ScenicGPS</a></li>
-              <li><a class="scrollPage" href="#music">Music</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#publications">
-              Publications
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-              <li><a class="scrollPage" href="#journals">Journals</a></li>
-              <li><a class="scrollPage" href="#conferences">Conferences</a></li>
-              <li><a class="scrollPage" href="#reports">Reports</a></li>
-              <li><a class="scrollPage" href="#talks">Talks</a></li>
-            </ul>
-          </li>
+          <li><a class="scrollPage" href="#publications">Publications</a></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <div id="masthead">
-    <h1>Jack Reilly</h1>
+    <div id="masthead">
+<!--     <h1>Jack Reilly</h1> -->
   </div>
-
-  <div id="sociallinks"></div>
-  <div id="featured">
+  
+    <div id="featured">
    <div style="width:920px; margin:0 auto;">
-    <div class="social">
+<!--    <div class="social">
      <div class="sociallinks">
       <a href="http://github.com/jackdreilly"><img src="img/github.png" class="socialicon" /></a>
       <a href="http://berkeley.academia.edu/JackReilly"><img src="img/academia.png" class="socialicon" /></a>
       <a href="http://www.linkedin.com/profile/view?id=103745509"><img src="img/linkedin.png" class="socialicon" /></a>
       <a href="http://www.mendeley.com/profiles/jack-reilly1/"><img src="img/mendeley.png" class="socialicon" /></a>
     </div>
-  </div>
+  </div>-->
+  
   <div class="container">
+  
+  <header class="hero-unit" id="header">
+          <h2 class="author">Timothy J. Hunter</h2>
+          <h2 class="title">Ph. D. Student, Computer Science, UC Berkeley</h2>
+  </header>
 
-    <!-- Main hero unit for a primary marketing message or call to action -->
-    <div id="aboutme" class="hero-unit">
-      <a href="img/me-full.jpg"><img class="img-polaroid" src="img/me.png" id="me" /></a>
-      <h1>Hello!</h1>
-      <p>
-        My name is Jack Reilly. I am a 4th year Ph.D student in <a href="http://www.ce.berkeley.edu/programs/sys">Civil Systems Engineering</a> at <a href="http://www.berkeley.edu">UC Berkeley</a>.
-      </p>
-      <p>
-        I work with Professor <a href="http://bayen.eecs.berkeley.edu">Alex Bayen</a> on optimal routing problems with applications to traffic and shared resources systems. You can learn more about my work by scrolling down and checking out my <a class="scrollPage" href="#research">research and projects</a> and my <a class="scrollPage" href="#publications">publications</a>.
-      </p>
-      <p>
-        Make sure to check out my social-ly links above to see my <a href="http://github.com/jackdreilly">github code repository</a> and more details on my papers.
-      </p>
-      <p>
-        Check out some of my <a class="scrollPage" href="#projects">projects</a>, ranging from <a class="scrollPage" href="#trustscore">social start-ups</a> to some of my <a class="scrollPage" href="#music">music</a>.
-      </p>
-      <p>
-        Finally, if you have any questions, hit me up at <em>jack d reilly at berkeley dot edu</em>.
-        <h6>*It is recommended to click play below while enjoying this site</h6>
-      </p>
-      <p><iframe src="https://embed.spotify.com/?uri=spotify:track:0qKCm8yeHoRJTpryDDQ9TT" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
-      </p>
-    </div>
-    <div class="hero-unit" id="research">
-      <h1>Research</h1>
-      <div id="interests">
-        <h2>Interests</h2>
-
-        <h3>Optimal Routing</h3>
-        I have been researching how game-theoretic concepts such as Nash equilibria and Stackelberg games can be used in conjunction with first-order PDE highway models to gain insights into how optimal rerouting policies can be generated when only a subset of drivers on the network are controllable. I have been collaborating with <a href="http://eecs.berkeley.edu/~walid">Walid Krichene</a> and <a href="http://cee.mit.edu/amin">Saurabh Amin</a> on this research.
-        <ul>
-          <li>Managing demand on shared resources that can be processed in parallel.
-            <ul>
-              <li> <a class="scrollPage" href="#nash-stackelberg">Stackelberg routing</a></li>
-              <li>References: <a href="#2">2</a> <a href="#5">5</a> <a href="#6">6</a> <a href="#7">7</a></li>
-            </ul>
-
-            <li>Using game-theoretic concepts to analyze and implement partial-control routing problems.
-              <ul>
-                <li>
-                  References: <a href="#4">4</a> <a href="#2">2</a> <a href="#5">5</a> <a href="#6">6</a> <a href="#7">7</a>
-                </li>
-                <li>
-                  See <a href="#optimal-rerouting" class="scrollPage">Eulerian/Lagrangian</a> and <a href="#nash-stackelberg" class="scrollPage">Nash/Stackelberg</a> work below.
-                </li>
-              </ul>
-            </li>
-            <li>Applications to traffic systems and cloud-based architectures</li>
-          </ul>
-          <h3>Adjoint-based Freeway Control</h3>
-          Using the adjoint of a PDE system (discretized or continuous), one can sometimes greatly reduce the complexity of computing the gradient of an objective with respect to some control parameters. In our work, the state-space is usually of a greater complexity than the control space, which enables the effective use of the adjoint system. We seek to apply the method to a number of control problems in order to have optimal policies generated from realistic underlying physical models. This work is done as a collaboration with <a href="http://eecs.berkeley.edu/~walid">Walid Krichene</a>, <a href="http://www.linkedin.com/in/samitha">Samitha Samaranayake</a>, and Maria Laura Delle Monache, and as a part of the <a href="http://www-sop.inria.fr/members/Paola.Goatin/ORESTE/index.html">ORESTE</a> collaboration with <a href="http://www.inria.fr/en/">INRIA</a> in France.
-          <ul>
-            <li>Coordinating ramp metering lights to reduce congestion on freeways.</li>
-            <li>Multi-source, multi-sink optimal rerouting policies using network-based PDE models.</li>
-            <li>Developing PDE models for accurate modeling of general onramp/offramp junctions and incorporating ODE buffer models for strong boundary conditions.</li>
-          </ul>
-          <h3>Distributed Optimization</h3>
-          <ul>
-            <li>Iterative, in-memory map-reduce algorithms for large-scale machine learning
-              <ul>
-                <li><a href="#cachereduce">CacheReduce</a></li>
-              </ul>
-            </li>
-            <li>Using collaborative filtering techniques to coordinate sub-networks towards global optimality</li>
-          </ul>
-
-          <h3>Mobile/Participatory Sensing</h3>
-          <ul>
-            <li>Using accelerometers and GPS in smartphones to collect geolocalized seismic information and developing filtering techniques for sensing in uncontrolled environments
-              <ul>
-                <li><a class="scrollPage" href="#ishake">iShake Project</a></li>
-                <li>References: <a href="#1">1</a> <a href="#3">3</a> <a href="#8">8</a> <a href="#10">10</a></li>
-              </ul>
-
-              <li>Live generation of emissions heat maps based on real-time weather and traffic estimation on highways.
-                <ul>
-                  <li><a href="#clearsky">ClearSky</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="hero-unit" id="academicwork">
-          <h1>Academic Work</h1>
-          <div id="nash-stackelberg">
-            <h2>Nash/Stackelberg Games</h2>
-            <div id="nash-carousel" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="active item"><img src="img/nash1.png" /></div>
-                <div class="item"><img src="img/nash2.png" /></div>
-                <div class="item"><img src="img/nash3.png" /></div>
-              </div>
-              <a class="carousel-control left" href="#nash-carousel" data-slide="prev">&lsaquo;</a>
-              <a class="carousel-control right" href="#nash-carousel" data-slide="next">&rsaquo;</a>
-            </div>
-            <div id="nash-paragraph">
-              Motivated by the problem of how to most effictively provide advice to a subset of drivers on a road network, my colleages and I began to study a type of congestion game called a Stackelberg game, or a leader-follower game.
-              <p>
-                In this game, the leader is considered to be the socially-optimizing central controller, who can control a fraction of the total demand on a network. The follower distributes the rest of the demand in a manner consistent with Nash equilibrium. The goal of the leader is to partition its demand optimally, anticipating the selfish behavior of the follower.
-              </p>
-              <p>
-                We were successful in extending this analysis to account for the particulars of freeway dynamics, where a route's travel time is not just a function of the demand, but also of some "congestion" mode.
-              </p>
-              <p>An interactive demonstration of the Nash equilibria of such networks is given below. See <a href="#2">2</a>,<a href="#5">5</a>,<a href="#6">6</a>,<a href="#7">7</a></li> for more details. <a href="http://github.com/jackdreilly/HQViz">Source code</a>.
-                <p>
-                  <a href="http://www3.decf.berkeley.edu/~jreilly/cdcnash">CDC 2012 Presentation (html)</a>
-                </p>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="span1">
-                    <div class="btn-grp btn-grp-vertical" id="controls">
-                      <button class="btn  btn-small btn-primary" id="demo"></button>
-                      <button class="btn btn-small btn-danger" id="reset">Reset</button>
-                    </div>
-                    <section id="meter-section">
-                    </section>
-                  </div>
-                  <div class="span4" id="col1">
-                    <section id="network-section">
-                      <h2 class="center">Network</h2>
-                      <svg id="network-svg" class="chart">
-                        <defs>
-                          <linearGradient id = "meter-container-gradient" x1 = "0%" y1 = "0%" x2 = "100%" y2 = "100%">
-                            <stop stop-color = "gray" offset = "0%"/>
-                            <stop stop-color = "black" offset = "100%"/>
-                          </linearGradient>
-                          <linearGradient id = "meter-gradient" x1 = "0%" y1 = "0%" x2 = "100%" y2 = "100%">
-                            <stop stop-color = "gray" offset = "0%"/>
-                            <stop stop-color = "#d53533" offset = "100%"/>
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </section>
-                    <section class="well well-big" id="information">
-                      <h2>Status: <span class="lead" id="status"></span></h2>
-                      <div id="status-info">
-                      </div>
-                    </section>
-                  </div>
-                  <div class="span4">
-                    <section id="plot-section">
-                      <h2 class="center">Latencies</h2>
-                    </section>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr>
-            <div id="optimal-rerouting">
-              <h2>Optimization-based Framework for Rerouting a Subset of Users with Mixed Lagrangian-Eulerian Demand</h2>
-              <div id="convex-carousel" class="carousel slide">
-                <div class="carousel-inner">
-                  <div class="active item"><img src="img/convex1.png" /></div>
-                  <div class="item"><img src="img/convex2.png" /></div>
-                  <div class="item"><img src="img/convex3.png" /></div>
-                </div>
-                <a class="carousel-control left" href="#convex-carousel" data-slide="prev">&lsaquo;</a>
-                <a class="carousel-control right" href="#convex-carousel" data-slide="next">&rsaquo;</a>
-              </div>
-              With the growing popularity of location-aware smartphones, it is becoming more realistic to have individual-level control of drivers on a freeway network, where a central service could provide alternative routes to drivers to improve overall traffic conditions.
-              <p>
-                It is clear that such an approach would only have partial penetration of the total flow on the freeway network, and any control policy must consider the unequipped drivers to find an optimal policy. We look into solving this problem using the cell-transmission model as the underlying discrete dynamics.
-              </p>
-              <p>
-                Additionally, there is limited information on the behavior of the uncontrolled drivers. Only total flow across links is known (from stationary sensors), which provides "Eulerian" type information. Since controlled drivers are assumed to have provided start-end goals via smartphone, then path-based "Lagrangian" information is available for these users.
-              </p>
-              <p>
-                We developed a game-theoretic approach to solving this problem, and pose it as a convex optimization problem. The work enables central agencies to understand equilibrium behavior of such policies, while providing asymmetric input due to the varying levels of information from the drivers. <a href="http://github.com/jackdreilly/commroute">Source code.</a>. See <a href="#4">4</a> for more information.
-              </p>
-            </div>
-            <hr>
-            <div id="ishake">
-              <h2>iShake</h2>
-              <div id="ishake-carousel" class="carousel slide">
-                <div class="carousel-inner">
-                  <div class="active item"><img src="img/ishake1.png" /></div>
-                  <div class="item"><img src="img/ishake3.png" /></div>
-                  <div class="item"><img src="img/ishake4.png" /></div>
-                </div>
-                <a class="carousel-control left" href="#ishake-carousel" data-slide="prev">&lsaquo;</a>
-                <a class="carousel-control right" href="#ishake-carousel" data-slide="next">&rsaquo;</a>
-              </div>
-              Emergency responders must "see" the effects of a major earthquake clearly and rapidly so that they can effectively respond to the damage it has produced. The goal of the iShake project is to create a system that moves beyond DYFI ("Did You Feel It?") by taking advantage of the accelerometers most people have already in their cell phones, which would collect ground motion intensity parameters during the earthquake, so that an accurate portrayal of the damage effects of an earthquake can be provided to government officials and emergency responders immediately after an event.
-              <p>
-                Through iShake people will be able to make use of their own smart phones and participate in an effective and valuable process to inform emergency responders in the event of an earthquake.
-              </p>
-              <p>
-                I developed the <a href="http://github.com/jackdreilly/iShakeGCode">iShake iPhone application</a> and the <a href="http://github.com/jackdreilly/iShakeBackend">backend server</a> to collect the accelerometer and GPS information. I also worked on developing filtering techniques for coping with the variable environments in which the samples could be taken.
-              </p>
-              <p>
-                See <a href="#1">1</a>, <a href="#3">3</a>, <a href="#8">8</a>, <a href="#10">10</a></li> for publications, and check out the <a href="http://ishakeberkeley.appspot.com">official site</a>.
-              </div>
-              <hr>
-              <div id="clearsky">
-                <h2>ClearSky</h2>
-                <div id="clearsky-carousel" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="active item"><a href="img/clearsky3.jpg"><img src="img/clearsky3.jpg" /></a></div>
-                    <div class="item"><a href="img/clearsky4.png"><img src="img/clearsky4.png" /></a></div>
-                    <div class="item"><a href="img/clearsky1.png"><img src="img/clearsky1.png" /></a></div>
-                    <div class="item"><a href="img/clearsky2.png"><img src="img/clearsky2.png" /></a></div>
-                  </div>
-                  <a class="carousel-control left" href="#clearsky-carousel" data-slide="prev">&lsaquo;</a>
-                  <a class="carousel-control right" href="#clearsky-carousel" data-slide="next">&rsaquo;</a>
-                </div>
-                The ClearSky project aimed to create real-time pollution maps based on live traffic estimations, current weather conditions and dispersion models. Additionally, there were efforts made to have standalone sensors attached to municipal vehicles to get "ground-truth" measurements to supplement the map creation.
-                <p>
-                  I contributed to the project by desigining and implement the system architecture that allowed the submodules to communicate and database design. Additionally, I set up the feed that allowed the standalone sensors to feed back to the server via UDP.
-                </p>
-              </div>
-              <hr>
-              <div id="cachereduce">
-                <h2>CacheReduce</h2>
-                <div id="cache-carousel" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="active item"><img src="img/cache1.png" /></div>
-                    <div class="item"><img src="img/cache2.png" /></div>
-                    <div class="item"><img src="img/cache3.png" /></div>
-                  </div>
-                  <a class="carousel-control left" href="#cache-carousel" data-slide="prev">&lsaquo;</a>
-                  <a class="carousel-control right" href="#cache-carousel" data-slide="next">&rsaquo;</a>
-                </div>
-                Some promising results have come out of the research into the alternating-directions method-of-multipliers (ADMM) approach to optimization. Particularly promising is its applications to distributed optimization, as the problem formulation allows one to easily parallelize the computations and distribute large datasets across many clusters.
-                <p>
-                  Map-reduce style algorithms work well within this context, as it is a natural architecture for collaborative filtering problems, but since most implementations are stateless after a single map-reduce operation, the network costs of transmitting large datasets on every iteration is often prohibitive for iterative map-reduce applications, such as this.
-                </p>
-                <p>
-                  To overcome this, we used the <a href="http://spark-project.org">Spark Scala framework</a> to allow for intermediate caching calls to reduce the network costs for large datasets.
-                </p>
-                <p>Visit <a href="https://github.com/jackdreilly/SparkOpt">here</a> for more information, including source code and report.
-                </div>
-              </div>
-
-              <div class="hero-unit" id="projects">
-                <h1>Projects</h1>
-                <div id="trustscore">
-                  <h2>TrustScore</h2>
-                  I worked on a team named <a href="http://trustscorekz.herokuapp.com/">TrustScore</a> (demo site) as a part of the <a href="http://creative-currency.org">Creative Currency</a> project in San Francisco that challenged technical people to come up with beneficial systems to serve the public good.
-                  We created a graph-based trust propagation system that encouraged agents to endorse one another in order to provide non-standard metrics when considering loan applications.
-                  <p>
-                    A demonstration is given below of how our algorithm works and how trust propagation can lead to a more efficient loaning network.
-                  </p>
-                  <a href="http://github.com/jackdreilly/TrustScore">Source code</a>.
-                  <table id="trust-table">
-                    <tr>
-                      <td>
-                        <div id="year-buttons">
-                          <div class="btn-group" data-toggle="buttons-radio">
-                            <button id="year1-button"  data-toggle="collapse" data-parent="#trust-accordion" href="#collapseOne" type="button" class="btn accordion-toggle">Year 1</button>
-                            <button id="year2-button"  data-toggle="collapse" data-parent="#trust-accordion" href="#collapseTwo" type="button" class="btn accordion-toggle">Year 2</button>
-                            <button id="year3-button"  data-toggle="collapse" data-parent="#trust-accordion" href="#collapseThree" type="button" class="btn accordion-toggle">Year 3</button>
-                            <button id="year4-button"  data-toggle="collapse" data-parent="#trust-accordion" href="#collapseFour" type="button" class="btn accordion-toggle">Year 4</button>
-                          </div>
-                        </div>
-
-                        <div class="accordion" id="trust-accordion">
-                          <div class="accordion-group">
-                            <div class="accordion-heading">
-                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#trust-accordion" href="#collapseOne">
-                                Year 1
-                              </a>
-                            </div>
-                            <div id="collapseOne" class="accordion-body collapse" style="height: auto; ">
-                              <div class="accordion-inner">
-                                <p>
-                                  The social network is very sparse, and not much information has been understood about who is in the network. All networks must start somehwere!
-                                  <ul>
-                                    <b>
-                                      <li>
-                                        All loanee scores are equal
-                                      </li>
-                                      <li>
-                                        Both successful and unsuccessful loanees remain in the system and can endorse others.
-                                      </li>
-                                    </b>
-                                  </ul>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion-group">
-                            <div class="accordion-heading">
-                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#trust-accordion" href="#collapseTwo">
-                                Year 2
-                              </a>
-                            </div>
-                            <div id="collapseTwo" class="accordion-body collapse" style="height: 0px; ">
-                              <div class="accordion-inner">
-                                <p>
-                                  While it will take some time to create an fully efficient referral system, the algorithms set up encourage taking loans from trustworthy endorsers. This further introduces trustworthiness into the network while reward those with successful endorsements.
-                                </p>
-                                <ul>
-                                  <b>
-                                    <li>
-                                      Some nodes have larger loanee scores based on back-propogation algorithm that rewards successful endoresments.
-                                    </li>
-                                  </b>
-                                </ul>
-
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="accordion-group">
-                          <div class="accordion-heading">
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#trust-accordion" href="#collapseThree">
-                              Year 3
-                            </a>
-                          </div>
-                          <div id="collapseThree" class="accordion-body collapse" style="height: 0px; ">
-                            <div class="accordion-inner">
-                              <p>
-                                The network has very few unsuccessful endoresments, yet those with poor credit scores are still being given loans from good endoresments. The network is beginning to grow much more rapidly, as there are more referral nodes.
-                              </p>
-                              <ul>
-                                <b>
-                                  <li>Central nodes are growing very fast</li>
-                                  <li>Successful nodes are clustering around other successful nodes</li>
-                                  <li>Unsuccessful nodes have limited endoresement power and exist on the "fringes" of the network</li>
-                                </b>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="accordion-group">
-                          <div class="accordion-heading">
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#trust-accordion" href="#collapseThree">
-                              Year 4
-                            </a>
-                          </div>
-                          <div id="collapseFour" class="accordion-body collapse" style="height: 0px; ">
-                            <div class="accordion-inner">
-                              Dominant endorsers are becoming obvious and should be upgraded to a "trusted" partner. The number of loans increases as well as the success rate. There is now a complete referral system that curated a successful user base!
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div id="tabContent">
-                        <div id="contentHolder">
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <hr>
-              <div id="buildit">
-                <h2><a href="http://teambuildit.herokuapp.com">Team Buildit</a></h2>
-                <iframe id="buildit-youtube" width="500" height="380" src="http://www.youtube.com/embed/ghaa7JrTmXo" frameborder="0" allowfullscreen></iframe>
-                My friend Devon Laduzinsky and I created and taught a 10 day project which exposed a group of six promising minority freshmen in high school to the discipline of engineering and automation. More accurately, we somehow got permission to smash concrete beams and make model bridges with kids, and call it volunteering. Check out the website <a href="http://teambuildit.herokuapp.com">here</a> to see more pictures and details of the lessons taught! <a href="http://github.com/jackdreilly/Smash">Source code</a>.
-                <div id="buildit-carousel" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="active item"><img src="http://teambuildit.herokuapp.com/static/biggg/3/grad.JPG" /></div>
-                    <div class="item"><img src="http://teambuildit.herokuapp.com/media/resources/IMG_0111.JPG" /></div>
-                    <div class="item"><img src="http://teambuildit.herokuapp.com/media/resources/IMG_0112.JPG" /></div>
-                    <div class="item"><img src="http://teambuildit.herokuapp.com/media/resources/IMG_0107.JPG" /></div>
-                  </div>
-                  <a class="carousel-control left" href="#buildit-carousel" data-slide="prev">&lsaquo;</a>
-                  <a class="carousel-control right" href="#buildit-carousel" data-slide="next">&rsaquo;</a>
-                </div>
-              </tr>
-            </table>
-          </div>
-          <hr>
-          <div id="jdr">
-            <h2>JDR Music System</h2>
-            Being a guitar player and mathematically-inclined guy, I have always viewed music in terms of numbers, intervals, building modules out of submodules, as opposed to the "traditional" letters-based representation that musical notation usually takes. To make the music composition process more in-line with the way I conceptualize, I created the JDR musical notation system, which enables one to specify scores in <em>relative</em> intervallic terms, and to define musical "riffs" of certain parts which can be composed and combined and modulated in different ways to create full instrumental parts.
-            <p>
-              I successfully implemented this language to create the classical musical notation from a JDR input file. Below check out a demo of the program and a sample JDR file.
-            </p>
-            <a href="https://github.com/jackdreilly/JDRMusic">Source code.</a>
-            <iframe width="420" height="315" src="http://www.youtube.com/embed/T8jViFB2pjY" frameborder="0" allowfullscreen="true"></iframe>
-            <pre>
-              Ob-la-di Ob-la-da
-              header:h1:[100,treble_up,Bb,4/4,mf,piano]
-
-              phrase:verse_p1: 3.8 3.8 3.8 3.8 3.8 3.8 2.8 1.8 {octave_down} 7.8 {octave_up} 2.4 2.4 ~.4 4.4 4.8 4.8 4.8 4.8 4.8 3.8 2.8 1.2 ~.2
-              phrase:verse_p2: 5.8 5.8 5.8 5.8 5.8 5.8 4.8 3.8 4.8 5.4 6.4 6.8 5.8 4.8 3.8 3.8 4.8 3.8 2.8 4.8 3.8 2.8 1.2 ~.8
-              phrase:mel_chorus: {length_8} 1 3 5 ~ 1 3 5 ~ 1 3 {length_off} 5.2 {octave_up} 1.2 {octave_down} 5.4 {length_8} 4 3 4 3 2 ~ 1 ~ ~ ~ {octave_up} 1 {octave_down} ~
-
-              phrase:melody:verse_p1 verse_p2 mel_chorus mel_chorus
-
-              phrase:ch1:{octave_up} ~.8 {staccato_on} {pitch_*1_}  4 8
-              phrase:ch4:{octave_up} ~.8 {staccato_on} {pitch_*4_}  4 8
-              phrase:ch5:{octave_up} ~.8 {staccato_on} {pitch_*5_7}  4 8
-              phrase:ch6:{octave_up} ~.8 {staccato_on} {pitch_*6_m}  4 8
-              phrase:ch3:{octave_up} ~.8 {staccato_on} {pitch_*3_m}  4 8
-
-              phrase:rhythm-verse:ch1 ch1 ch5 ch5 ch5 ch5 ch1 ch1 ch1 ch1 ch4  ch4  ch1 ch5 ch1 ch1
-              phrase:rhythm-chorus:ch1 ch1 ch3 ch6 ch1 ch5 ch1 ch1
-
-              phrase:rhythm:rhythm-verse rhythm-chorus rhythm-chorus
-
-              phrase:rest_4:{pitch_~} 1 1 1 1
-              phrase:chorus_lahs:{length_8} {octave_up} [1_5] [1_5] [1_5] [1_5] [1_5] [1_5] [1_5] [1_5] [7_5] [7_5] [7_5] [7_5] [1_6] [1_6] [1_6] [1_6]  [1_5] [1_5] [1_5] [1_5] [7_5] [7_5] [7_5] [7_5] [1_5] [1_5] [1_5] [1_5] [1_5] [1_5] [1_5] [1_5]
-
-              phrase:lahs:rest_4 rest_4 rest_4 chorus_lahs
-
-              staff:h1:melody
-              staff:h1:rhythm
-              staff:h1:lahs
-            </pre>
-          </div>
-          <hr>
-          <div id="scenicgps">
-            <h2>ScenicGPS</h2>
-            <a href="http://nylnch.com">Dan Lynch</a> and I developed an iPhone application which suggested scenic routes for users to take by pulling in interesting and scenic factors along alternate routes. Additionally, users could submit their own scenic pieces to be included for others to see. Check out more details and videos <a href="http://www.nlynch.com/pages/64/scenic_gps/">here</a>! <a href="https://github.com/jackdreilly/ScenicGPS">iPhone application source</a>. <a href="https://github.com/pyramation/scenicgps">Server source</a>.
-            <table>
-              <tr>
-                <td>
-                  <div id="scenicgps-carousel" class="carousel slide">
-                    <div class="carousel-inner">
-                      <div class="active item"><img src="http://www.nlynch.com/folders/64__scenic_gps/929__annote.png" /></div>
-                      <div class="item"><img src="http://www.nlynch.com/folders/64__scenic_gps/928__view.png" /></div>
-                      <div class="item"><img src="http://www.nlynch.com/folders/64__scenic_gps/927__routes.png" /></div>
-                    </div>
-                    <a class="carousel-control left" href="#scenicgps-carousel" data-slide="prev">&lsaquo;</a>
-                    <a class="carousel-control right" href="#scenicgps-carousel" data-slide="next">&rsaquo;</a>
-                  </div>
-                </td>
-                <td>
-                  <video width="400" controls=""><source src="http://nlynch.com/folders/64__scenic_gps/925__scenicgpsdemo.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"><source src="/folders/64__scenic_gps/924__scenicgpsdemo.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;"><source src="/folders/64__scenic_gps/926__scenicgpsdemo.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">Your browser does not support the video tag</video>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <hr>
-          <div id="music">
-            <h2>Music</h2>
-            <button class="btn btn-large btn-primary" id="soundcloud-button">Pull in SoundCloud Music!</button>
-            <button class="btn btn-large btn-primary" id="youtube-button">Pull in Youtube Music!</button>
-            <div id="soundcloud">
-              <h3>SoundCloud</h3>
-            </div>
-            <div id="youtube">
-              <h3>Youtube</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-unit" id="publications">
-          <h1>Publications</h1>
-
-          <h2 id="journals">Journals</h2>
-
-          <ol>
-            <li><span class="reflink" id="1">1. </span>Reilly, J., Dashti, S., Ervasti, M., Bray, J. D., Glaser, S. D., Bayen, A. M. (2012). Mobile Phones as Seismologic Sensors : Building the iShake System. IEEE Transactions on Automation Science and Engineering (under review), 1-13.
-            </li>
-            <li><span class="reflink" id="2">2. </span>Krichene, W., Reilly, J. D., Amin, S.,  Bayen, A. M. (2012). Stackelberg Routing on Parallel Networks with Horizontal Queues (under review), 1-36, Transactions on Automatic Control.
-            </li>
-            <li><span class="reflink" id="3">3. </span>Dashti, S., Bray, J. D., Reilly, J., Glaser, S.,  Bayen, A. (2011). iShake: Evaluating the Reliability of Mobile Phones as Seismic Monitoring Instruments (under review). Earthquake Spectra Journal.
-            </li>
-          </ol>
+  
+  <!--  
+          <header class="hero-unit" id="header">
+          <h1 class="title">Ph. D. Student, Computer Science, UC Berkeley</h1>
+          <h2 class="author">Timothy J. Hunter</h2>
+        </header>
+-->
+    <div class="row-fluid">
+    
+    
 
 
-          <h2 id="conferences">Refereed Conference Publications</h2>
+<!--       <div class="span8"> -->
+          <div class="span12">
+<a href="img/me-full.jpg"><img class="img-polaroid" src="img/trombi.jpg" id="me" /></a>
+<h2 id="about">About</h2>
+<p>I am a Ph. D. student in Artifical Intelligence, in the Department of Computer Science at the University of California at Berkeley.</p>
+<p>My advisors are <a href="http://www.cs.berkeley.edu/%7Epabbeel/">Pieter Abbeel</a> and <a href="http://lagrange.ce.berkeley.edu/bayen/">Alexandre Bayen</a>.</p>
+<p>Degrees:</p>
+<ul>
+<li>M.Sc. Electrical Engineering,<br /> Stanford University, 2008</li>
+<li>Eng. Deg., Applied Math.<br /> Ecole Polytechnique, France, 2004</li>
+</ul>
+<p><strong>Research interests:</strong></p>
+<ul>
+<li>Artificial intelligence
+<ul>
+<li>Bayesian inference on large scale systems</li>
+<li>Reinforcement learning</li>
+</ul></li>
+<li>Distribution software engineering
+<ul>
+<li>Optmization</li>
+<li>Cloud-based machine learning</li>
+</ul></li>
+<li>Privacy and security in cyberphysical systems
+<ul>
+<li>Information sharing</li>
+<li>Transportation in intelligent infrastructure systems</li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="contact">Contact</h1>
+<p><strong>E Mail:</strong> tjhunter@eecs.berkeley.edu</p>
+<p><strong>Address:</strong></p>
+<pre><code>Timothy Hunter
+University of California, Berkeley
+710 Sutardja Dai Hall
+Berkeley, CA 94720-1720</code></pre>
+<p><strong>Social networks:</strong> I am also on <a href="http://www.linkedin.com/in/timotheehunter">LinkedIn</a> and <a href="http://www.viadeo.com/en/profile/timothee.hunter">Viadeo</a>.</p>
+<p><strong>CV:</strong> <a href="publications/cv.pdf">PDF</a> <a href="publications/resume.pdf">Shorter version</a></p>
+<hr />
+<h1 id="research">Research</h1>
+<p>I work on the <em>Mobile Millennium</em> project, and its successor, the <em>Integrated Corridor Management</em> (ICM) project. The Mobile Millennium project aims to develop methodologies and algorithms in traffic estimation, traffic forecast and real-time routing. It is a joint effort between UC Berkeley, the California Department of Transportation, Navteq and Nokia.</p>
+<p>In this context I am interested in efficient statistical methods for estimating traffic. In particular, I work on correctly mapping probe data to the road network, and on distributed algorthims using cloud computing. This is a joint research project with the <a href="http://amplab.cs.berkeley.edu/">AMPLab at UC Berkeley</a>.</p>
+<p>Here are a few projects I have been working on.</p>
+<h2 id="path-inference">Path inference</h2>
+<p>The <em>Path Inference Filter</em> (PIF) is a novel algorithm to map-match GPS trajectories on a road network. It works on GPS data sampled at high frequencies (1Hz) or low frequencies (up to 2 minute intervals) and can be adapted to a variety of scenarios (offline smoothing, online filtering, etc.). We use it in the <em>Mobile Millennium</em> project to map several millions of GPS points from various sources on a daily basis. We provide an implementation in Scala/Java that can map several thousands points per second on a road network comprising 2 millions road elements with high accuracy (the San Francisco Bay Area).</p>
+<p>A nearly industrial-grade implementation (Scala) is available at <a href="https://github.com/calpath/open-traffic">https://github.com/calpath/open-traffic</a></p>
+<p>A more academic (slower) implementation in Python is available at <a href="https://github.com/tjhunter/Path-Inference-Filter">https://github.com/tjhunter/Path-Inference-Filter</a></p>
+<p>More code, videos, examples are available <a href="pif.html">here</a>.</p>
+<h2 id="large-scale-estimation">Large scale estimation</h2>
+<p><em>(Joint work with Matei Zaharia and Tathagata Das)</em> We investigated solving traffic estimation at a very large scale using the <a href="http://spark-project.org"><strong>Spark</strong> computing framework</a>. We implemented an EM algorithm that can update traffic estimates in less than 5 seconds from a GPS stream with a rate of tens of thousands of observations per second (using a cluster of 80 machines).</p>
+<p>See references [4] and [1].</p>
+<p>The source code (Scala) is available at <a href="http://github.com/tjhunter/">http://github.com/tjhunter/</a> <em>Requires Spark 0.7, which will be released soon</em>.</p>
+<h2 id="understanding-urban-patterns">Understanding urban patterns</h2>
+<p><em>(Collaboration with Pu Wang and Marta González)</em>.</p>
+<p>See [3].</p>
+<hr />
+<h1 id="publications">Publications</h1>
+<h2 id="journals">Journals</h2>
+<ol style="list-style-type: example">
+<li><p>Timothy Hunter, Tathagata Das, Matei Zaharia, Pieter Abbeel, Alexandre M. Bayen. <strong>Large Scale Estimation in Cyberphysical Systems using Streaming Data: a Case Study with Smartphone Traces</strong>. Under review for the <em>IEEE Transactions on Automation Science and Engineering</em>. <a href="http://arxiv.org/abs/1212.3393">Arxiv</a></p></li>
+<li><p>Timothy Hunter, Pieter Abbeel, Alexandre M. Bayen. <strong>The Path Inference Filter: Model-Based Low-Latency Map Matching of Probe Vehicle Data</strong>. To appear in the <em>IEEE Transactions on Intelligent Transportation Systems</em>. <a href="http://arxiv.org/abs/1109.1966">Arxiv</a></p></li>
+<li><p>Pu Wang, Timothy Hunter, Alexandre M. Bayen, Katja Schechtner, Marta C. González. <strong>Understanding Road Usage Patterns in Urban Areas</strong>. In <em>Nature Scientific Reports</em>. <a href="http://www.nature.com/srep/2012/121220/srep01001/pdf/srep01001.pdf">PDF</a> <a href="http://dx.doi.org/10.1038/srep01001">DOI</a></p></li>
+</ol>
+<h2 id="conferences">Conferences</h2>
+<ol start="4" style="list-style-type: example">
+<li><p>Timothy Hunter, Teodor Moldovan, Matei Zaharia, Samy Merzgui, Justin Ma, Michael J. Franklin, Pieter Abbeel, and Alexandre M. Bayen. <strong>Scaling the mobile millennium system in the cloud</strong>. In <em>Proceedings of the 2nd ACM Symposium on Cloud Computing</em> (SOCC), 2011. ACM, New York, NY, USA, , Article 28 , 8 pages. <a href="http://doi.acm.org/10.1145/2038916.2038944">DOI</a> <a href="publications/hunter11socc.pdf">PDF</a> <a href="#" class="showbibtex">BIBTex</a> <a href="#" class="hidebibtex">Hide BIBTex</a></p>
+<pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span class="kw">@inproceedings</span>{<span class="ot">Hunter:2011:SMM:2038916</span>.<span class="ot">2038944</span>,
+  <span class="dt">author</span> = {Hunter, Timothy and Moldovan, Teodor and Zaharia, Matei and Merzgui, Samy and Ma, Justin and Franklin, Michael J. and Abbeel, Pieter and Bayen, Alexandre M.},
+  <span class="dt">title</span> = {Scaling the mobile millennium system in the cloud},
+  <span class="dt">booktitle</span> = {Proceedings of the 2nd ACM Symposium on Cloud Computing},
+  <span class="dt">series</span> = {SOCC &#39;11},
+  <span class="dt">year</span> = {2011},
+  <span class="dt">isbn</span> = {978-1-4503-0976-9},
+  <span class="dt">location</span> = {Cascais, Portugal},
+  <span class="dt">pages</span> = {28:1--28:8},
+  <span class="dt">articleno</span> = {28},
+  <span class="dt">numpages</span> = {8},
+  <span class="dt">url</span> = {http://doi.acm.org/10.1145/2038916.2038944},
+  <span class="dt">doi</span> = {10.1145/2038916.2038944},
+  <span class="dt">acmid</span> = {2038944},
+  <span class="dt">publisher</span> = {ACM},
+  <span class="dt">address</span> = {New York, NY, USA},
+}<span class="co"> </span></code></pre></li>
+<li><p>Timothy Hunter, Pieter Abbeel, Alexandre M. Bayen. <strong>The Path Inference Filter: Model-Based Low-Latency Map Matching of Probe Vehicle Data</strong>. In the <em>10th International Workshop on the Algorithmic Foundations of Robotics</em> (WAFR), 2012. <a href="http://dx.doi.org/10.1007/978-3-642-36279-8_36">DOI</a> <a href="publications/hunter12wafr.pdf">PDF</a> <a href="#" class="showbibtex">BIBTex</a> <a href="#" class="hidebibtex">Hide BIBTex</a></p>
+<pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span class="kw">@inproceedings</span>{<span class="ot">hunter12wafr</span>,
+  <span class="dt">author</span> = {Hunter, Timothy and Abbeel, Pieter and Bayen, Alexandre M.},
+  <span class="dt">title</span> = {The Path Inference Filter: Model-Based Low-Latency Map Matching of Probe Vehicle Data},
+  <span class="dt">booktitle</span> = {Algorithmic Foundations of Robotics X},
+  <span class="dt">series</span> = {Springer Tracts in Advanced Robotics},
+  <span class="dt">year</span> = {2012},
+  <span class="dt">isbn</span> = {978-3-642-36278-1},
+  <span class="dt">location</span> = {Cambridge, MA, USA},
+  <span class="dt">pages</span> = {591:1--607:17},
+  <span class="dt">articleno</span> = {28},
+  <span class="dt">numpages</span> = {17},
+  <span class="dt">url</span> = {http://doi.acm.org/10.1145/2038916.2038944},
+  <span class="dt">doi</span> = {10.1007/978-3-642-36279-8_36},
+  <span class="dt">publisher</span> = {Springer-Verlag},
+  <span class="dt">address</span> = {Heidelberg, Germany},
+}<span class="co"> </span></code></pre></li>
+</ol>
+<h2 id="workshops-technical-reports">Workshops, technical reports</h2>
+<ol start="6" style="list-style-type: example">
+<li><p>Timothy Hunter, Ryan Herring, Pieter Abbeel and Alex Bayen. <strong>Path and travel time inference from GPS probe vehicle data</strong>. At <em>NIPS Analyzing Networks and Learning with Graphs</em>, 2009. <a href="publications/hunter09nipsworkshop.pdf">PDF</a></p></li>
+<li><p>Timothy Hunter, Matei Zaharia, Tathagata Das, Pieter Abbeel and Alexandre Bayen. <strong>Large-Scale Online Expectation Maximization with Spark Streaming</strong>. At <em>NIPS workshop on parallel and large-scale machine learning</em>, 2012. <a href="publications/hunter12biglearning.pdf">PDF</a></p></li>
+<li><p>Matei Zaharia, Tathagata Das, Haoyuan Li, Timothy Hunter, Scott Shenker, Ion Stoica. <strong>Discretized Streams: A Fault-Tolerant Model for Scalable Stream Processing</strong>. Technical Report No. UCB/EECS-2012-259. <a href="http://www.eecs.berkeley.edu/Pubs/TechRpts/2012/EECS-2012-259.pdf">PDF</a> <a href="#" class="showbibtex">BIBTex</a> <a href="#" class="hidebibtex">Hide BIBTex</a></p>
+<pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span class="kw">@techreport</span>{<span class="ot">Zaharia:EECS</span>-<span class="ot">2012</span>-<span class="ot">259</span>,
+<span class="dt">Author</span> = {Zaharia, Matei and Das, Tathagata and Li, Haoyuan and Hunter, Timothy and Shenker, Scott and Stoica, Ion},
+<span class="dt">Title</span> = {Discretized Streams: A Fault-Tolerant Model for Scalable Stream Processing},
+<span class="dt">Institution</span> = {EECS Department, University of California, Berkeley},
+<span class="dt">Year</span> = {2012},
+<span class="dt">Month</span> = {Dec},
+<span class="dt">URL</span> = {http://www.eecs.berkeley.edu/Pubs/TechRpts/2012/EECS-2012-259.html},
+<span class="dt">Number</span> = {UCB/EECS-2012-259}
+}</code></pre></li>
+</ol>
+<h2 id="talks">Talks</h2>
+<p><strong>Large scale sensing and prediction</strong>, Alex Bayen and Timothy Hunter.<br />Keynote speech at the AMPLab retreat, October 2010.</p>
+<p><strong>Spark User Applications - Mobile Millennium</strong>.<br />Tutorial for the <a href="http://ampcamp.berkeley.edu/">AMPLab Bootcamp</a>.<br /><a href="http://youtu.be/CLyQvsQpg4I">Youtube</a></p>
+<h2 id="older-publications">Older publications</h2>
+<ol start="9" style="list-style-type: example">
+<li><p>Pieter Abbeel, Adam Coates, Timothy Hunter and Andrew Y. Ng 2009 <strong>Autonomous Autorotation of an RC Helicopter</strong> In <em>Experimental Robotics</em> <a href="http://dx.doi.org/10.1007/978-3-642-00196-3_45">DOI</a> <a href="publications/abbeel2009.pdf">PDF</a> <a href="#" class="showbibtex">BIBTex</a> <a href="#" class="hidebibtex">Hide BIBTex</a></p>
+<pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span class="kw">@incollection</span>{,
+<span class="dt">year</span>={2009},
+<span class="dt">isbn</span>={978-3-642-00195-6},
+<span class="dt">booktitle</span>={Experimental Robotics},
+<span class="dt">volume</span>={54},
+<span class="dt">series</span>={Springer Tracts in Advanced Robotics},
+<span class="dt">editor</span>={Khatib, Oussama and Kumar, Vijay and Pappas, GeorgeJ.},
+<span class="dt">doi</span>={10.1007/978-3-642-00196-3_45},
+<span class="dt">title</span>={Autonomous Autorotation of an RC Helicopter},
+<span class="dt">url</span>={http://dx.doi.org/10.1007/978-3-642-00196-3_45},
+<span class="dt">publisher</span>={Springer Berlin Heidelberg},
+<span class="dt">author</span>={Abbeel, Pieter and Coates, Adam and Hunter, Timothy and Ng, AndrewY.},
+<span class="dt">pages</span>={385-394}
+}</code></pre></li>
+</ol>
+<hr />
+<h1 id="trivia">Trivia</h1>
+<p>In the few spare times academia leaves me, I enjoy discovering and taking pictures of new places. You can see a few samples on my <a href="http://picasaweb.google.com/timothee.hunter">Picasa page</a>.</p>
+<p>Some say that I used to play magic tricks when I was in high school, according to this <a href="http://en.wikipedia.org/wiki/Timothy_Hunter">Wikipedia entry</a>.</p>
+<p>This web page was created using <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> and styled with <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, based on the excellent template from <a href="https://github.com/jackdreilly/jackdreilly.github.com">Jack Reilly</a>. The CSS theme was autogenerated using <a href="http://www.lavishbootstrap.com/">Lavish</a>. The source code for this page is available <a href="https://github.com/tjhunter/tjhunter.github.com">here</a>.</p>
+<!--           </div> -->
+      </div>  <!--/span-->
+    </div>  <!--/row-->
 
+    <hr>
 
-          <ol>
-            <li><span class="reflink" id="4">4. </span>Reilly, J., Krichene, W., Amin, S.,  Bayen, A. M. (2012). Optimization-based Framework for Rerouting a Subset of Users with Mixed Lagrangian-Eulerian Demand (under review), 1-19, International Symposium on
-              Transportation and Traffic Theory.
-            </li>
-            <li><span class="reflink" id="5">5. </span>Krichene, W., Reilly, J., Amin, S.,  Bayen, A. M. (2012b). On the Characterization and Computation of Nash Equilibria in Horizontal Queueing Networks. Conference on Decision and Control.
-            </li>
-            <li><span class="reflink" id="6">6. </span>Krichene, W., Reilly, J., Amin, S.,  Bayen, A. M. (2012a). Stackelberg Routing on Horizontal Queueing Networks. Conference on Decision and Control.
-            </li>
-            <li><span class="reflink" id="7">7. </span>Jebbari, Y., Krichene, W., Reilly, J. D.,  Bayen, A. M. (2012). Stackelberg Thresholds on Parallel Networks with Horizontal Queues (under review), American Control Conference.
-            </li>
-            <li><span class="reflink" id="8">8. </span>Ervasti, M., Dashti, S., Reilly, J., Bray, J. D., Bayen, A.,  Glaser, S. (2011). iShake: mobile phones as seismic sensors--user study findings. Proceedings of the 10th International Conference on Mobile and Ubiquitous Multimedia, 43-52.
-            </li>
-          </ol>
+    <footer>
+      <p class="author">Timothy J. Hunter, 2012-12-20.</p>
+    </footer>
 
-          <h2 id="reports">Technical Reports</h2>
-
-
-          <ol>
-            <li><span class="reflink" id="9">9. </span>Reilly, J., Prodhomme, B.,  Grauzam, J. (2012). Cache-Reduce : Implementing Collaborative Filtering on a Cluster with the Spark Framework, 1-20.
-            </li>
-            <li><span class="reflink" id="10">10. </span>Dashti, S., Reilly, J., Bray, J. D., Bayen, A., Glaser, S.,  Mari, E. (2011). iShake: Using Personal Devices to Deliver Rapid Semi-Qualitative Earthquake Shaking Information. GeoEngineering Report, Depart. of Civil and Environ. Engineering, Univ. of California, Berkeley, Feb, 28.
-            </li>
-          </ol>
-
-          <h2 id="talks">Invited Talks</h2>
-
-
-          <ol>
-            <li><span class="reflink" id="11">11. </span>Nash Equilibria on Parallel Link Networks with Horizontal Queues, Conference on Decision and Control, Hawaii, December 13 2012
-            </li>
-            <li><span class="reflink" id="12">12. </span>Rerouting with partial control in the Connected Corridors project, Robust and Stochastic Control Methods for Sustainable Engineering, Hawaii, December 14 2012
-            </li>
-            <li><span class="reflink" id="13">13. </span>iShake - Using cellphones for seismic estimations, Earthquake Early Warning Summit, Berkeley, April 4 2011
-            </li>
-          </ol>
-
-        </div>
+  </div><!--/.fluid-container-->
+  
+  </div>
+  </div>
+  
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+  <script src="js/bibtex.js"></script>
 
 
 
-        <footer>
-          <p>&copy; Jack Reilly 2012</p>
-        </footer>
-
-      </div>
-
-      <script type="text/javascript" src="lib/jquery.js"></script>
-      <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-      <script src="lib/d3.js" type="text/javascript"></script>
-      <script src="lib/d3.force.js"></script>
-      <script src="lib/d3.geom.js"></script>
-      <script src="lib/d3.layout.js"></script>
-      <script src="js/app.js" type="text/javascript"></script>
-      <script src="js/trust.js" type="text/javascript"></script>
-      <script src="js/onload.js" type="text/javascript"></script>
-      <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-36722751-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-      </script>
-    </body>
-    </html>
+</body>
+</html>
