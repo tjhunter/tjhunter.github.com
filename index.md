@@ -36,7 +36,7 @@ Graphframes is a distributed graph processing interface built on top of Apache S
 Website: [Documentation](http://graphframes.github.io/graphframes/docs/_site/index.html) [Github](https://github.com/graphframes/graphframes)
 
 Presentations:
-- [Spark+AI Summit]()
+- [Spark+AI Summit 2017](https://www.youtube.com/watch?v=NmbKst7ny5Q)
 
 ### spark-sklearn
 
@@ -51,12 +51,20 @@ Tensorframes is a wrapper between Google TensorFlow and Apace Spark. While I wou
 
 Website: [Github](https://github.com/databricks/tensorframes)
 
+Presentations:
+- [Spark Summit 2016](https://www.youtube.com/watch?v=gXItObf-qaI)
+- [Meetup 2016](https://www.youtube.com/watch?v=08mrnJxcIWw)
+
 
 ### Deep Learning Pipelines
 
 DLP augments Spark's standard Machine Learning toolkits with Deep Learning technologies. Using this package, one can easily apply DL models on large collections without having to learn new frameworks and still using all the ease of use of Spark. This is one of the recommended ways to apply a Keras or TensorFlow model on billions of data points.
 
 Website: [Github](https://github.com/databricks/spark-deep-learning)  [Documentation](https://databricks.github.io/spark-deep-learning/docs/_site/index.html)
+
+Presentations:
+- [Spark summit 2017](https://www.youtube.com/watch?v=iMoXWOezMXY)
+- [Keynote presentation at the Spark Summit 2017](https://www.youtube.com/watch?v=qAZ5XUz32yM)
 
 
 ## Contact
@@ -71,6 +79,20 @@ tjhunter@eecs.berkeley.edu
 **Social networks:**
 I am also on [LinkedIn](http://www.linkedin.com/in/timotheehunter) and [Viadeo](http://www.viadeo.com/en/profile/timothee.hunter).
 
+## Other presentations
+
+[A meetup on MLFlow and incoming features of Spark](https://www.youtube.com/watch?v=vpZ1xnrWUWc)
+
+A presentation on the status of project Hydrogen (high performance numerical integration in Spark): [video](https://www.youtube.com/watch?v=vVZwzG7uKvI)
+
+A few presentations on Geospatial analysis at scale using Deep Learning and Spark (done with my colleague Raela Wang):
+- [Spark summit 2018](https://www.youtube.com/watch?v=UMIhAyrv6wY)
+- [Webinar](https://www.youtube.com/watch?v=deZGxio8BWo)
+
+A short presentation at Scala By the Bay 2017: [video](https://www.youtube.com/watch?v=fNfAocshs6U)
+
+
+
 
 ## Webinars
 
@@ -80,3 +102,4 @@ I am also on [LinkedIn](http://www.linkedin.com/in/timotheehunter) and [Viadeo](
 
 [An old presentation to UK Authority](https://vimeo.com/296648633) about the modern power of geospatial.
 
+[Webinar on MLFlow](https://www.youtube.com/watch?v=vpZ1xnrWUWc)
